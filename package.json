@@ -7,6 +7,7 @@
     "http-server": "^14.1.1"
   },
   "scripts": {
+    "start": "http-server ./src",
     "build": "npm run create-config && cp -R ./src ./dist",
     "dev": "npm run create-config && http-server ./src",
     "create-config": "node -r dotenv/config ./scripts/create-config.js"

@@ -2,9 +2,11 @@
   "name": "@metaverse-backpack/backpack-avatar-selector",
   "license": "MIT",
   "repository": "Metaverse-Backpack/backpack-avatar-selector",
-  "devDependencies": {
-    "dotenv": "^16.0.1",
+  "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
   },
   "scripts": {
     "start": "http-server ./src",

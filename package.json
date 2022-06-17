@@ -1,0 +1,14 @@
+{
+  "name": "@metaverse-backpack/backpack-avatar-selector",
+  "license": "MIT",
+  "repository": "Metaverse-Backpack/backpack-avatar-selector",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "build": "npm run create-config && cp -R ./src ./dist",
+    "dev": "npm run create-config && http-server ./src",
+    "create-config": "node -r dotenv/config ./scripts/create-config.js"
+  }
+}

@@ -1,4 +1,3 @@
-// We can retrieve the access token by a cookie or use any other mechanism to transfer it
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -15,6 +14,20 @@ function getCookie(cname) {
   return "";
 }
 
+function getQueryParameter(key) {
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  return params[key];
+}
+
+// We can retrieve the access token by a query parameter or a cookie or use any other mechanism to transfer it
+function getAccessToken() {
+  //return getCookie("access_token");
+  return getQueryParameter("access_token");
+}
+
 // We need to register a scene component, if we want to retrieve the access token at runtime
 AFRAME.registerComponent("backpack-scene", {
   init: function () {
@@ -24,7 +37,7 @@ AFRAME.registerComponent("backpack-scene", {
     // We add a backpack component to the scene by providing the backend url and access token
     backpackEl.setAttribute("backpack-avatar-selector", {
       backpackUrl: config.BACKPACK_BACKEND,
-      accessToken: getCookie("access_token"),
+      accessToken: getAccessToken(),
     });
     sceneEl.appendChild(backpackEl);
 
@@ -49,7 +62,7 @@ AFRAME.registerComponent("backpack-scene", {
     portal.setAttribute("position", "-5 1.6 0");
     portal.setAttribute("backpack-portal", {
       href: config.EXPERIENCE,
-      title: "Meditation PoC",
+      title: "Metameditation",
       image: "#previewThumbnail",
     });
 

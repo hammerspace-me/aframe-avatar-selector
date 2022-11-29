@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const configAsString = `const config = {
-  BACKPACK_BACKEND: "${process.env.BACKPACK_BACKEND}",
+  HAMMERSPACE_BACKEND: "${process.env.HAMMERSPACE_BACKEND}",
   EXPERIENCE: "${process.env.EXPERIENCE}",
 };
 `;

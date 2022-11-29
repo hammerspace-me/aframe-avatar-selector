@@ -1,7 +1,26 @@
 {
-  "name": "@metaverse-backpack/backpack-avatar-selector",
+  "name": "@hammerspace-me/aframe-avatar-selector",
+  "version": "0.0.1",
   "license": "MIT",
-  "repository": "Metaverse-Backpack/backpack-avatar-selector",
+  "repository": "hammerspace-me/aframe-avatar-selector",
+  "keywords": [
+    "hammerspace",
+    "metaverse",
+    "aframe",
+    "aframe-component",
+    "aframe-vr",
+    "vr",
+    "webvr",
+    "webxr"
+  ],
+  "author": "Protocol Labs Inc.",
+  "contributors": [
+    {
+      "name": "Tobias Petrasch",
+      "email": "tobias.petrasch@protocol.ai",
+      "url": "https://petrasch.io"
+    }
+  ],
   "dependencies": {
     "http-server": "^14.1.1"
   },
